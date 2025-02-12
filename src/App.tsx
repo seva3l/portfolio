@@ -5,7 +5,7 @@ import ExperienceCard from "./components/Experience";
 import ProjectCard from "./components/Project";
 import { experiences, projects, skills } from "./data/config";
 import Navbar from "./components/Navbar";
-
+import Typewriter from "typewriter-effect";
 const App = () => {
 	return (
 		<div className="min-h-screen bg-gray-900 text-gray-100 w-full">
@@ -26,9 +26,23 @@ const App = () => {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.8 }}
 				>
-					<h2 className="text-3xl mb-2">Sandrei Mangubat</h2>
+					<h2 className="text-3xl mb-2">
+						<Typewriter
+							options={{
+								strings: ["Sandrei Mangubat"],
+								autoStart: true,
+								loop: true,
+							}}
+						/>
+					</h2>
 					<p className="text-2xl  text-cyan-400 mb-6">
-						Mobile App & Backend Developer
+						<Typewriter
+							options={{
+								strings: ["Mobile App & Backend Developer"],
+								autoStart: true,
+								loop: true,
+							}}
+						/>
 					</p>
 					<div className="flex space-x-4 mb-8">
 						<a
