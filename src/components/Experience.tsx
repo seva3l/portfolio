@@ -1,17 +1,18 @@
-// components/ExperienceCard.tsx
 import { motion } from "framer-motion";
 
+interface Props {
+	id: number;
+	title: string;
+	company: string;
+	duration: string;
+	description: string[];
+}
 export default function ExperienceCard({
 	title,
 	company,
 	duration,
 	description,
-}: {
-	title: string;
-	company: string;
-	duration: string;
-	description: string[];
-}) {
+}: Props) {
 	return (
 		<motion.div
 			className="p-6 bg-gray-800 rounded-lg"
