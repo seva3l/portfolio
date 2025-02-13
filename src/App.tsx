@@ -6,36 +6,65 @@ import ProjectCard from "./components/Project";
 import { experiences, projects, skills } from "./data/config";
 import Navbar from "./components/Navbar";
 import Typewriter from "typewriter-effect";
+import Skill from "./components/Skill";
+import { useState } from "react";
+import ProjectModal from "./components/ProjectModal";
+import type { IProject } from "./types";
+
 const App = () => {
+	const [selectedProject, setSelectedProject] = useState<IProject | null>(null);
+	const [isModalOpen, setIsModalOpen] = useState(false);
+
+	const openModal = (project: IProject) => {
+		setSelectedProject(project);
+		setIsModalOpen(true);
+	};
+
+	const closeModal = () => {
+		setIsModalOpen(false);
+		setSelectedProject(null);
+	};
 	return (
-		<div className="min-h-screen bg-gray-900 text-gray-100 w-full">
+		<div className="min-h-screen bg-gray-900 text-gray-100">
+			{selectedProject && (
+				<ProjectModal
+					isOpen={isModalOpen}
+					onClose={closeModal}
+					project={selectedProject}
+				/>
+			)}
 			{/* Navigation */}
-			<nav className="sticky lg:fixed top-0 w-full bg-gray-800/80 backdrop-blur-sm z-50">
-				<div className="container mx-auto px-6 py-4">
-					<div className="flex items-center justify-between">
-						<h2 className="font-bold text-2xl">Sandrei Mangubat</h2>
-						<Navbar />
+			{!isModalOpen && (
+				<nav className="sticky lg:fixed top-0 w-full bg-gray-800/80 backdrop-blur-sm z-50">
+					<div className="container mx-auto px-6 lg:py-4 py-2">
+						<div className="flex items-center justify-between">
+							<h2 className="font-bold text-2xl">Dreiveloper</h2>
+							<Navbar />
+						</div>
 					</div>
-				</div>
-			</nav>
+				</nav>
+			)}
 
 			{/* Hero Section */}
-			<section className="container mx-auto px-6 lg:pt-30 pt-5 pb-16 ">
+			<section className="px-6 lg:pt-30 pt-5 pb-16 items-center flex justify-center">
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.8 }}
+					className="flex flex-col items-center justify-center"
 				>
-					<h2 className="text-3xl mb-2">
-						<Typewriter
-							options={{
-								strings: ["Sandrei Mangubat"],
-								autoStart: true,
-								loop: true,
-							}}
+					<div className="h-65 mb-3">
+						<motion.img
+							src="/profile.jpg"
+							alt="Sandrei Mangubat"
+							className="w-full h-full lg:w-60 lg:h-60 lg:rounded-full rounded-2xl shadow-lg"
+							initial={{ opacity: 0, scale: 0.8 }}
+							animate={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 0.8 }}
 						/>
-					</h2>
-					<p className="text-2xl  text-cyan-400 mb-6">
+					</div>
+					<h2 className="text-3xl mb-2">Sandrei Mangubat</h2>
+					<p className="text-2xl  text-cyan-400 mb-6 text-center">
 						<Typewriter
 							options={{
 								strings: ["Mobile App & Backend Developer"],
@@ -64,16 +93,16 @@ const App = () => {
 							<FiLinkedin size={24} />
 						</a>
 					</div>
-					<p className="text-lg text-gray-400 max-w-2xl">
-						Mobile App Developer and Backend Engineer specializing in React
-						Native and Node.js, with 4+ years of experience building
-						cross-platform applications and scalable services.
+					<p className="text-lg text-gray-400 max-w-2xl text-center">
+						Freelance Full-Stack Developer Specializing in Mobile App
+						Development | Expert in React Native & Backend Development and
+						Integration
 					</p>
 				</motion.div>
 			</section>
 
 			{/* Experience Section */}
-			<section id="experience" className="py-16 bg-gray-800/50">
+			<section id="experience" className="py-16">
 				<div className="container mx-auto px-6">
 					<h2 className="text-3xl font-bold mb-12">Professional Experience</h2>
 					<div className="space-y-8">
@@ -90,33 +119,23 @@ const App = () => {
 					<h2 className="text-3xl font-bold mb-12">Featured Projects</h2>
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 						{projects.map((project) => (
-							<ProjectCard key={project.id} {...project} />
+							<ProjectCard
+								onViewProject={() => openModal(project)}
+								key={project.id}
+								{...project}
+							/>
 						))}
 					</div>
 				</div>
 			</section>
 
 			{/* Skills Section */}
-			<section id="skills" className="py-16 bg-gray-800/50">
+			<section id="skills" className="py-16 ">
 				<div className="container mx-auto px-6">
 					<h2 className="text-3xl font-bold mb-12">Technical Skills</h2>
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 						{skills.map((skill) => (
-							<div key={skill.id} className="p-6 bg-gray-700 rounded-lg">
-								<h3 className="text-xl font-semibold mb-4 text-cyan-400">
-									{skill.category}
-								</h3>
-								<div className="flex flex-wrap gap-2">
-									{skill.items.map((item) => (
-										<span
-											key={item}
-											className="px-3 py-1 bg-gray-600 rounded-full text-sm"
-										>
-											{item}
-										</span>
-									))}
-								</div>
-							</div>
+							<Skill {...skill} key={skill.id} />
 						))}
 					</div>
 				</div>
@@ -125,7 +144,7 @@ const App = () => {
 			{/* Footer */}
 			<footer className="border-t border-gray-800">
 				<div className="container mx-auto px-6 py-8 text-center text-gray-400">
-					<p>© 2024 Sandrei Mangubat. All rights reserved.</p>
+					<p>© 2025 Dreiveloper</p>
 				</div>
 			</footer>
 		</div>

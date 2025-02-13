@@ -52,19 +52,59 @@ export const experiences = [
 export const projects = [
 	{
 		id: 1,
-		title: "Plantanong - Plant Recognition App",
+		title: "Map Notes",
 		description:
-			"Award-winning plant identification application with community features",
-		tech: ["React Native", "Flask", "MySQL", "AI Integration"],
+			"Mapnotes is a mobile app developed using React Native, featuring an interactive map that allows users to create and manage notes with location data. The app integrates Mapbox for mapping features, React Navigation for seamless navigation between screens, and Firebase for authentication and data storage",
+		tech: ["React Native", "Firebase"],
 		link: "#",
+		images: [
+			"/projects/mapnotes/login.jpeg",
+			"/projects/mapnotes/signup.jpeg",
+			"/projects/mapnotes/note-list.jpeg",
+			"/projects/mapnotes/create.jpeg",
+			"/projects/mapnotes/edit.jpeg",
+			"/projects/mapnotes/map-notes.jpeg",
+		],
 	},
+
 	{
 		id: 2,
-		title: "FoodCalc - Calorie & Nutrition Calculator",
+		title: "FoodCalc",
 		description:
-			"A mobile app for calculating food nutrition values with offline functionality",
+			"Plan your recipes, calculate costs, and maximize profits with ease. FoodCalc helps food entrepreneurs and restaurant owners streamline pricing, track ingredient costs, and ensure profitable margins all in one intuitive platform.",
 		tech: ["React Native", "SQLite"],
 		link: "https://play.google.com/store/apps/details?id=com.Foodmenucalculator",
+		images: [
+			"/projects/foodcalc/home.jpeg",
+			"/projects/foodcalc/menu.jpeg",
+			"/projects/foodcalc/recipe.jpeg",
+		],
+	},
+	{
+		id: 3,
+		title: "E-Shop",
+		description:
+			"Shop for your daily essentials and favorite foods with ease! Our eCommerce app offers a seamless shopping experience with fast delivery, secure payments, and a wide selection of goods all at your fingertips",
+		tech: ["React Native", "Local Storage"],
+		link: "#",
+		images: [
+			"/projects/eshop/home.jpeg",
+			"/projects/eshop/cart.jpeg",
+			"/projects/eshop/order-success.jpeg",
+		],
+	},
+	{
+		id: 4,
+		title: "Expense Tracker",
+		description:
+			"Track your expenses effortlessly with our intuitive expense tracker app. Categorize spending, set budgets, and gain insights with real-time analytics—helping you stay in control of your finances, anytime, anywhere.",
+		tech: ["React Native"],
+		link: "#",
+		images: [
+			"/projects/expense-tracker/home.jpeg",
+			"/projects/expense-tracker/chart.jpeg",
+			"/projects/expense-tracker/expenses.jpeg",
+		],
 	},
 ];
 
@@ -72,12 +112,30 @@ export const skills = [
 	{
 		id: 1,
 		category: "Mobile Development",
-		items: ["React Native", "TypeScript", "Redux", "React Query"],
+		items: ["React Native", "TypeScript", "Redux", "React Query", "Nativewind"],
+	},
+	{
+		id: 7,
+		category: "Web Development",
+		items: [
+			"React",
+			"Nextjs",
+			"TypeScript",
+			"Redux",
+			"React Query",
+			"Tailwind",
+		],
 	},
 	{
 		id: 2,
 		category: "Backend Development",
-		items: ["Node.js", "Express", "Python (Flask)", "Java (Spring Boot)"],
+		items: [
+			"Node.js",
+			"Express",
+			"Typescript",
+			"Python (Flask)",
+			"Java (Spring Boot)",
+		],
 	},
 	{
 		id: 3,
@@ -87,6 +145,13 @@ export const skills = [
 	{
 		id: 4,
 		category: "Tools & Others",
-		items: ["Git", "REST APIs", "Docker", "Test-Driven Development"],
+		items: [
+			"Git",
+			"REST APIs",
+			"Docker",
+			"Test-Driven Development",
+			"MVC",
+			"Repository Pattern",
+		],
 	},
 ];

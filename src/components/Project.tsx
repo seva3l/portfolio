@@ -1,14 +1,15 @@
+import type { IProject } from "../types";
+
+interface ProjectCardProps extends IProject {
+	onViewProject: () => void;
+}
+
 export default function ProjectCard({
 	title,
 	description,
 	tech,
-	link,
-}: {
-	title: string;
-	description: string;
-	tech: string[];
-	link: string;
-}) {
+	onViewProject,
+}: ProjectCardProps) {
 	return (
 		<div className="p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition">
 			<h3 className="text-xl font-semibold mb-2">{title}</h3>
@@ -23,9 +24,13 @@ export default function ProjectCard({
 					</span>
 				))}
 			</div>
-			<a href={link} className="text-cyan-400 hover:text-cyan-300">
-				View Project →
-			</a>
+			<button
+				onClick={onViewProject}
+				type="button"
+				className="text-cyan-400 hover:text-cyan-300"
+			>
+				View Project
+			</button>
 		</div>
 	);
 }
