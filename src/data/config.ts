@@ -140,7 +140,15 @@ export const skills = [
 	{
 		id: 3,
 		category: "Database & Cloud",
-		items: ["MongoDB", "MySQL", "AWS EC2", "Supabase", "Cloudinary"],
+		items: [
+			"MongoDB",
+			"MySQL",
+			"PostgreSQL",
+			"AWS EC2",
+			"Firebase",
+			"Supabase",
+			"Cloudinary",
+		],
 	},
 	{
 		id: 4,
