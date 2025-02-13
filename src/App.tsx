@@ -39,10 +39,10 @@ const App = () => {
 				<nav className="sticky lg:fixed top-0 w-full bg-gray-800/80 backdrop-blur-sm z-50">
 					<div className="container mx-auto px-6 lg:py-4 py-2">
 						<div className="flex items-center justify-between">
-							<div className="flex items-center space-x-2">
+							<a href="/" className="flex items-center space-x-2">
 								<RiShutDownLine size={30} color="#34D2F1" />
-								<h2 className="font-bold text-2xl">Dreiveloper</h2>
-							</div>
+								<h2 className="font-bold text-2xl">&lt;Dreiveloper/&gt;</h2>
+							</a>
 
 							<Navbar />
 						</div>
@@ -62,7 +62,7 @@ const App = () => {
 						<motion.img
 							src="/profile.jpg"
 							alt="Sandrei Mangubat"
-							className="w-full h-full lg:w-60 lg:h-60 lg:rounded-full rounded-sm shadow-lg"
+							className="w-60 h-60 rounded-full  shadow-lg"
 							initial={{ opacity: 0, scale: 0.8 }}
 							animate={{ opacity: 1, scale: 1 }}
 							transition={{ duration: 0.8 }}
@@ -81,19 +81,19 @@ const App = () => {
 					<div className="flex space-x-4 mb-8">
 						<a
 							href="mailto:sandrei.mangubat@gmail.com"
-							className="p-2 rounded-full bg-gray-800 hover:bg-cyan-400 transition"
+							className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition"
 						>
 							<FiMail size={24} />
 						</a>
 						<a
 							href="https://github.com/seva3l"
-							className="p-2 rounded-full bg-gray-800 hover:bg-cyan-400 transition"
+							className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition"
 						>
 							<FiGithub size={24} />
 						</a>
 						<a
 							href="https://linkedin.com/in/smangubat"
-							className="p-2 rounded-full bg-gray-800 hover:bg-cyan-400 transition"
+							className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition"
 						>
 							<FiLinkedin size={24} />
 						</a>

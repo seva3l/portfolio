@@ -27,7 +27,7 @@ export default function ProjectCard({
 			<button
 				onClick={onViewProject}
 				type="button"
-				className="text-cyan-400 hover:text-cyan-300"
+				className="text-cyan-400 hover:text-white border-1"
 			>
 				View Project
 			</button>

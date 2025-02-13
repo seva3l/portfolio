@@ -84,7 +84,7 @@ export default function Navbar() {
 												<nav className="flex flex-col space-y-4">
 													<button
 														type="button"
-														className="text-lg text-cyan-400 "
+														className="text-lg text-cyan-400 border-1"
 														onClick={() => {
 															setMobileMenuOpen(false);
 															window.location.href = "#experience";
@@ -94,7 +94,7 @@ export default function Navbar() {
 													</button>
 													<button
 														type="button"
-														className="text-lg text-cyan-400"
+														className="text-lg text-cyan-400 border-1"
 														onClick={() => {
 															setMobileMenuOpen(false);
 															window.location.href = "#projects";
@@ -104,7 +104,7 @@ export default function Navbar() {
 													</button>
 													<button
 														type="button"
-														className="text-lg text-cyan-400"
+														className="text-lg text-cyan-400 border-1"
 														onClick={() => {
 															setMobileMenuOpen(false);
 															window.location.href = "#skills";
