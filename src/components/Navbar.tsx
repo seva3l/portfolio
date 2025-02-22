@@ -12,6 +12,23 @@ import { useState } from "react";
 export default function Navbar() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+	const scrollToSection = (sectionId: string) => {
+		const section = document.getElementById(sectionId);
+		if (section) {
+			const yOffset = -40;
+			const y =
+				section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+			setMobileMenuOpen(false);
+
+			requestAnimationFrame(() => {
+				window.scrollTo({
+					top: y,
+					behavior: "smooth",
+				});
+			});
+		}
+	};
+
 	return (
 		<>
 			{/* Mobile Menu Button */}
@@ -25,15 +42,27 @@ export default function Navbar() {
 
 			{/* Desktop Navigation */}
 			<div className="hidden lg:flex space-x-6">
-				<a href="#experience" className="hover:text-cyan-400 transition">
+				<button
+					type="button"
+					onClick={() => scrollToSection("experience")}
+					className="hover:text-cyan-400 transition"
+				>
 					Experience
-				</a>
-				<a href="#projects" className="hover:text-cyan-400 transition">
+				</button>
+				<button
+					type="button"
+					onClick={() => scrollToSection("projects")}
+					className="hover:text-cyan-400 transition"
+				>
 					Projects
-				</a>
-				<a href="#skills" className="hover:text-cyan-400 transition">
+				</button>
+				<button
+					type="button"
+					onClick={() => scrollToSection("skills")}
+					className="hover:text-cyan-400 transition"
+				>
 					Skills
-				</a>
+				</button>
 			</div>
 
 			{/* Mobile Drawer */}
@@ -85,30 +114,21 @@ export default function Navbar() {
 													<button
 														type="button"
 														className="text-lg text-white border-1 border-gray-500"
-														onClick={() => {
-															setMobileMenuOpen(false);
-															window.location.href = "#experience";
-														}}
+														onClick={() => scrollToSection("experience")}
 													>
 														Experience
 													</button>
 													<button
 														type="button"
 														className="text-lg text-white border-1 border-gray-500"
-														onClick={() => {
-															setMobileMenuOpen(false);
-															window.location.href = "#projects";
-														}}
+														onClick={() => scrollToSection("projects")}
 													>
 														Projects
 													</button>
 													<button
 														type="button"
 														className="text-lg text-white border-1 border-gray-500"
-														onClick={() => {
-															setMobileMenuOpen(false);
-															window.location.href = "#skills";
-														}}
+														onClick={() => scrollToSection("skills")}
 													>
 														Skills
 													</button>
