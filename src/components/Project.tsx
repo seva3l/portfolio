@@ -11,7 +11,7 @@ export default function ProjectCard({
 	onViewProject,
 }: ProjectCardProps) {
 	return (
-		<div className="p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition">
+		<div className="p-6 bg-gray-800/25 border-gray-800 border-1 rounded-lg hover:bg-gray-700/20 transition">
 			<h3 className="text-xl font-semibold mb-2">{title}</h3>
 			<p className="text-gray-300 mb-4">{description}</p>
 			<div className="flex flex-wrap gap-2 mb-4">

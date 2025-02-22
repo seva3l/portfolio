@@ -36,7 +36,7 @@ const App = () => {
 			)}
 			{/* Navigation */}
 			{!isModalOpen && (
-				<nav className="sticky lg:fixed top-0 w-full bg-gray-800/80 backdrop-blur-sm z-50">
+				<nav className="sticky lg:fixed top-0 w-full bg-gray-800/25 backdrop-blur-sm z-50">
 					<div className="container mx-auto px-6 lg:py-4 py-2">
 						<div className="flex items-center justify-between">
 							<a href="/" className="flex items-center space-x-2">
@@ -81,19 +81,19 @@ const App = () => {
 					<div className="flex space-x-4 mb-8">
 						<a
 							href="mailto:sandrei.mangubat@gmail.com"
-							className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition"
+							className="p-2 rounded-full bg-gray-800 border-1 border-white hover:border-cyan-400 hover:bg-gray-700 transition"
 						>
 							<FiMail size={24} />
 						</a>
 						<a
 							href="https://github.com/seva3l"
-							className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition"
+							className="p-2 rounded-full bg-gray-800 border-1 border-white hover:border-cyan-400 hover:bg-gray-700 transition"
 						>
 							<FiGithub size={24} />
 						</a>
 						<a
 							href="https://linkedin.com/in/smangubat"
-							className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition"
+							className="p-2 rounded-full bg-gray-800 border-1 border-white hover:border-cyan-400 hover:bg-gray-700 transition"
 						>
 							<FiLinkedin size={24} />
 						</a>

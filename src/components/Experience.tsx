@@ -17,7 +17,7 @@ export default function ExperienceCard({
 }: Props) {
 	return (
 		<motion.div
-			className="p-6 bg-gray-800 rounded-lg hover:bg-gray-700 "
+			className="p-6 bg-gray-800/25 border-gray-800 border-1 rounded-lg hover:bg-gray-700/20"
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			viewport={{ once: true }}

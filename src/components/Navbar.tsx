@@ -57,7 +57,7 @@ export default function Navbar() {
 
 					<div className="fixed inset-0 overflow-hidden">
 						<div className="absolute inset-0 overflow-hidden">
-							<div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+							<div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full">
 								<TransitionChild
 									as={Fragment}
 									enter="transform transition ease-in-out duration-500"
@@ -68,7 +68,7 @@ export default function Navbar() {
 									leaveTo="translate-x-full"
 								>
 									<DialogPanel className="pointer-events-auto relative w-screen max-w-md ">
-										<div className="flex h-full flex-col bg-gray-800 shadow-xl">
+										<div className="flex h-full flex-col bg-gray-800/25 shadow-xl">
 											<div className="px-6 py-4">
 												<div className="flex justify-end">
 													<button
@@ -84,7 +84,7 @@ export default function Navbar() {
 												<nav className="flex flex-col space-y-4">
 													<button
 														type="button"
-														className="text-lg text-cyan-400 border-1"
+														className="text-lg text-white border-1 border-gray-500"
 														onClick={() => {
 															setMobileMenuOpen(false);
 															window.location.href = "#experience";
@@ -94,7 +94,7 @@ export default function Navbar() {
 													</button>
 													<button
 														type="button"
-														className="text-lg text-cyan-400 border-1"
+														className="text-lg text-white border-1 border-gray-500"
 														onClick={() => {
 															setMobileMenuOpen(false);
 															window.location.href = "#projects";
@@ -104,7 +104,7 @@ export default function Navbar() {
 													</button>
 													<button
 														type="button"
-														className="text-lg text-cyan-400 border-1"
+														className="text-lg text-white border-1 border-gray-500"
 														onClick={() => {
 															setMobileMenuOpen(false);
 															window.location.href = "#skills";
