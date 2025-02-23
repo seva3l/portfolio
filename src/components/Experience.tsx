@@ -22,9 +22,9 @@ export default function ExperienceCard({
 			whileInView={{ opacity: 1 }}
 			viewport={{ once: true }}
 		>
-			<h3 className="text-xl font-semibold">{title}</h3>
+			<h3 className="text-xl font-semibold text-cyan-400">{title}</h3>
 			<div className="flex lg:flex-row flex-col lg:items-center justify-between mb-4">
-				<p className="text-cyan-400">{company}</p>
+				<p>{company}</p>
 				<p className="text-gray-400 text-sm">{duration}</p>
 			</div>
 			<ul className="list-disc list-inside space-y-2">
@@ -33,7 +33,7 @@ export default function ExperienceCard({
 						<div className="w-[30px] flex justify-center">
 							<FaCodeBranch size={15} />
 						</div>
-						<p className="text-gray-300">{item}</p>
+						<p className="text-gray-300 flex-1">{item}</p>
 					</div>
 				))}
 			</ul>

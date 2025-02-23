@@ -23,14 +23,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 		<Modal
 			isOpen={isOpen}
 			onRequestClose={onClose}
-			className="bg-gray-900/90  p-6 rounded-lg max-w-3xl mx-auto mt-10 relative"
+			className="bg-gray-900 p-6 rounded-lg max-w-3xl mx-auto mt-10 relative"
 			overlayClassName="fixed inset-0 bg-black/70 flex items-center justify-center px-4"
 		>
 			{/* Close Button Positioned Outside the Image Area */}
 			<button
 				type="button"
 				onClick={onClose}
-				className="absolute top-3 right-3 text-white text-2xl z-50 bg-gray-800/50 p-2 rounded-full hover:bg-gray-700 transition"
+				className="absolute top-3 right-3 text-white text-2xl z-50 p-2 rounded-full hover:bg-gray-700 transition"
 			>
 				✖
 			</button>

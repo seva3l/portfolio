@@ -58,7 +58,7 @@ const App = () => {
 					transition={{ duration: 0.8 }}
 					className="flex flex-col items-center justify-center"
 				>
-					<div className="h-65 mb-3">
+					<div className="h-65 mb-3 relative">
 						<motion.img
 							src="/profile.jpg"
 							alt="Sandrei Mangubat"
@@ -67,12 +67,15 @@ const App = () => {
 							animate={{ opacity: 1, scale: 1 }}
 							transition={{ duration: 0.8 }}
 						/>
+						<h2 className="absolute right-25 bottom-2 text-3xl">🇵🇭</h2>
 					</div>
-					<h2 className="text-3xl mb-2">Sandrei Mangubat</h2>
-					<p className="text-2xl  text-cyan-400 mb-6 text-center">
+					<h2 className="text-3xl mb-2 flex items-center text-cyan-400">
+						Sandrei Mangubat
+					</h2>
+					<p className="text-2xl mb-6 text-center">
 						<Typewriter
 							options={{
-								strings: ["Mobile App & Backend Developer"],
+								strings: ["Full-Stack Developer"],
 								autoStart: true,
 								loop: true,
 							}}

@@ -3,13 +3,14 @@
 export const experiences = [
 	{
 		id: 1,
-		title: "Freelance Mobile & Backend Developer",
+		title: "Freelance Mobile, Backend & IoT Developer",
 		company: "Self-Employed",
 		duration: "Dec 2021 - Present",
 		description: [
-			"Lead development of multiple React Native applications",
+			"Led development of multiple React Native applications",
 			"Architected and implemented Node.js/Express backend services",
-			"Implemented CI/CD pipelines reducing deployment time by 60%",
+			"Designed and developed IoT home automation solutions, integrating hardware with cloud services",
+			"Implemented CI/CD pipelines, reducing deployment time by 60%",
 		],
 	},
 	{
@@ -26,13 +27,11 @@ export const experiences = [
 	{
 		id: 3,
 		title: "Mobile App and Backend Developer",
-		company: "TopApps",
+		company: "TopApps Inc.",
 		duration: "August 2022 - April 2023",
 		description: [
 			"Enhanced existing React Native application with new features",
 			"Developed RESTful APIs using Spring Boot",
-			"Implemented real-time notifications system using WebSockets",
-			"Reduced API response times by 40% through optimization and caching strategies",
 			"Integrated third-party payment APIs",
 		],
 	},
@@ -42,9 +41,9 @@ export const experiences = [
 		company: "Thousand Minds Social Media Inc.",
 		duration: "November 2019 - July 2020",
 		description: [
-			"Built a React Native mobile app from scratch",
-			"Designed and implemented Flask backend API architecture",
-			"Integrated CouchDB for efficient data management and real-time syncing",
+			"Enhanced and added new features to an eCommerce React Native application",
+			"Developed Python automation scripts for database management and optimization",
+			"Integrated TNVS API for seamless delivery and logistics management",
 		],
 	},
 ];
@@ -112,7 +111,14 @@ export const skills = [
 	{
 		id: 1,
 		category: "Mobile Development",
-		items: ["React Native", "TypeScript", "Redux", "React Query", "Nativewind"],
+		items: [
+			"React Native",
+			"TypeScript",
+			"Redux",
+			"React Query",
+			"Nativewind",
+			"Zustand",
+		],
 	},
 	{
 		id: 7,
@@ -124,6 +130,7 @@ export const skills = [
 			"Redux",
 			"React Query",
 			"Tailwind",
+			"Zustand",
 		],
 	},
 	{
@@ -159,7 +166,9 @@ export const skills = [
 			"Docker",
 			"Test-Driven Development",
 			"MVC",
+			"Websockets",
 			"Repository Pattern",
+			"Microcontrollers",
 		],
 	},
 ];
