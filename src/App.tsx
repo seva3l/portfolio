@@ -7,7 +7,7 @@ import { experiences, projects, skills } from "./data/config";
 import Navbar from "./components/Navbar";
 import Typewriter from "typewriter-effect";
 import Skill from "./components/Skill";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ProjectModal from "./components/ProjectModal";
 import type { IProject } from "./types";
 import { RiShutDownLine } from "react-icons/ri";
@@ -15,6 +15,15 @@ import { RiShutDownLine } from "react-icons/ri";
 const App = () => {
 	const [selectedProject, setSelectedProject] = useState<IProject | null>(null);
 	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [isLoading, setIsLoading] = useState(true);
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setIsLoading(false);
+		}, 3000);
+
+		return () => clearTimeout(timer);
+	}, []);
 
 	const openModal = (project: IProject) => {
 		setSelectedProject(project);
@@ -25,6 +34,30 @@ const App = () => {
 		setIsModalOpen(false);
 		setSelectedProject(null);
 	};
+
+	// Loading screen component
+	if (isLoading) {
+		return (
+			<div className="min-h-screen bg-gray-900 flex items-center justify-center">
+				<div className="flex flex-col items-center">
+					<motion.div
+						animate={{ rotate: 360 }}
+						transition={{
+							duration: 2,
+							repeat: Number.POSITIVE_INFINITY,
+							ease: "linear",
+						}}
+					>
+						<RiShutDownLine size={80} color="#34D2F1" />
+					</motion.div>
+					<h2 className="mt-6 text-2xl text-cyan-400 font-bold">
+						&lt;Dreiveloper/&gt;
+					</h2>
+				</div>
+			</div>
+		);
+	}
+
 	return (
 		<div className="min-h-screen bg-gray-900 text-gray-100">
 			{selectedProject && (
