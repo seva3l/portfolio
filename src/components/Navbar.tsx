@@ -31,7 +31,7 @@ export default function Navbar() {
 
 	return (
 		<>
-			{/* Mobile Menu Button */}
+			{/* Mobile Menu Button - Removed bg-red-500 */}
 			<button
 				type="button"
 				className="lg:hidden p-2 text-gray-100 hover:text-cyan-400"
@@ -97,7 +97,7 @@ export default function Navbar() {
 									leaveTo="translate-x-full"
 								>
 									<DialogPanel className="pointer-events-auto relative w-screen max-w-md ">
-										<div className="flex h-full flex-col bg-gray-800/25 shadow-xl">
+										<div className="flex h-full flex-col bg-gray-800/25 backdrop-blur-sm shadow-xl">
 											<div className="px-6 py-4">
 												<div className="flex justify-end">
 													<button
@@ -113,21 +113,21 @@ export default function Navbar() {
 												<nav className="flex flex-col space-y-4">
 													<button
 														type="button"
-														className="text-lg text-white border-1 border-gray-500"
+														className="text-lg text-white p-3 border border-gray-500 rounded bg-gray-800/50 hover:border-cyan-400 hover:text-cyan-400 transition"
 														onClick={() => scrollToSection("experience")}
 													>
 														Experience
 													</button>
 													<button
 														type="button"
-														className="text-lg text-white border-1 border-gray-500"
+														className="text-lg text-white p-3 border border-gray-500 rounded bg-gray-800/50 hover:border-cyan-400 hover:text-cyan-400 transition"
 														onClick={() => scrollToSection("projects")}
 													>
 														Projects
 													</button>
 													<button
 														type="button"
-														className="text-lg text-white border-1 border-gray-500"
+														className="text-lg text-white p-3 border border-gray-500 rounded bg-gray-800/50 hover:border-cyan-400 hover:text-cyan-400 transition"
 														onClick={() => scrollToSection("skills")}
 													>
 														Skills
