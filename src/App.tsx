@@ -43,16 +43,13 @@ const App = () => {
 					<motion.div
 						animate={{ rotate: 360 }}
 						transition={{
-							duration: 2,
+							duration: 0.1,
 							repeat: Number.POSITIVE_INFINITY,
 							ease: "linear",
 						}}
 					>
-						<RiShutDownLine size={80} color="#34D2F1" />
+						<RiShutDownLine size={50} color="#34D2F1" />
 					</motion.div>
-					<h2 className="mt-6 text-2xl text-cyan-400 font-bold">
-						&lt;Dreiveloper/&gt;
-					</h2>
 				</div>
 			</div>
 		);
